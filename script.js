@@ -21,6 +21,8 @@ const state = {
       verified: true,
       badge: "Wholesale Hub",
       icon: "fa-wheat-awn",
+      image:
+        "https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?auto=format&fit=crop&w=240&q=80",
     },
     {
       id: "prod-2",
@@ -35,6 +37,8 @@ const state = {
       verified: true,
       badge: "Wholesale Hub",
       icon: "fa-bottle-droplet",
+      image:
+        "https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?auto=format&fit=crop&w=240&q=80",
     },
     {
       id: "prod-3",
@@ -49,6 +53,8 @@ const state = {
       verified: true,
       badge: "Wholesale Hub",
       icon: "fa-cube",
+      image:
+        "https://images.unsplash.com/photo-1581268494610-d6e4f4c7a0d4?auto=format&fit=crop&w=240&q=80",
     },
     {
       id: "prod-4",
@@ -63,6 +69,8 @@ const state = {
       verified: true,
       badge: "Wholesale Hub",
       icon: "fa-bread-slice",
+      image:
+        "https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=240&q=80",
     },
     {
       id: "prod-5",
@@ -77,6 +85,8 @@ const state = {
       verified: true,
       badge: "Wholesale Hub",
       icon: "fa-bowl-rice",
+      image:
+        "https://images.unsplash.com/photo-1586201375761-83865001e31c?auto=format&fit=crop&w=240&q=80",
     },
   ],
   orders: [
@@ -317,7 +327,7 @@ function renderSupplierProducts() {
     <tr class="hover:bg-slate-50/80 transition">
       <td class="px-4 py-3 font-semibold text-slate-900 flex items-center space-x-2">
         <span class="w-7 h-7 rounded-lg bg-blue-50 text-bizblue-600 flex items-center justify-center text-xs">
-          <i class="fa-solid ${p.icon}"></i>
+           <img src="${p.image}" alt="${p.name}" class="w-7 h-7 rounded-lg object-cover" loading="lazy" />
         </span>
         <span>${p.name}</span>
       </td>
@@ -355,7 +365,7 @@ function renderB2BOrderProducts() {
         <div class="flex items-start justify-between">
           <div class="flex items-center space-x-2.5">
             <div class="w-10 h-10 rounded-xl bg-blue-100 text-bizblue-700 flex items-center justify-center text-sm">
-              <i class="fa-solid ${p.icon}"></i>
+                <img src="${p.image}" alt="${p.name}" class="w-10 h-10 rounded-xl object-cover" loading="lazy" />
             </div>
             <div>
               <h4 class="text-sm font-bold text-slate-900">${p.name}</h4>
@@ -521,7 +531,7 @@ function filterMarketplace() {
 
         <div class="flex items-center space-x-3 py-1">
           <div class="w-12 h-12 rounded-xl bg-slate-100 text-bizblue-600 flex items-center justify-center text-xl shrink-0">
-            <i class="fa-solid ${p.icon}"></i>
+            <img src="${p.image}" alt="${p.name}" class="w-12 h-12 rounded-xl object-cover shrink-0" loading="lazy" />
           </div>
           <div>
             <h3 class="font-bold text-slate-900 text-sm leading-snug">${p.name}</h3>
@@ -791,6 +801,8 @@ function saveNewSupplierProduct() {
     verified: true,
     badge: "Wholesale Hub",
     icon: "fa-box",
+    image:
+      "https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=240&q=80",
   });
 
   closeModal("addProductModal");
